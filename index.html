@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Cá Nhân - Công Nghệ Số</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* 1. Tùy biến thanh cuộn trình duyệt (Scrollbar) theo phong cách tối giản công nghệ */
+        ::-webkit-scrollbar {
+            width: 8px; /* Chiều rộng thanh cuộn dọc */
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9; /* Màu nền đường ray */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #6366f1; /* Màu Indigo chủ đạo của thanh trượt */
+            border-radius: 99px; /* Bo tròn tuyệt đối hai đầu */
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4f46e5; /* Đậm màu hơn khi di chuột vào */
+        }
+
+        /* 2. Hiệu ứng nền ma trận lưới công nghệ chuyển động tịnh tiến (Cyber Tech Grid Dynamic) */
+        .tech-grid-bg {
+            background-image: linear-gradient(to right, rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
+            background-size: 24px 24px; /* Kích thước từng ô lưới vuông */
+            animation: grid-travel 20s linear infinite; /* Chuyển động tịnh tiến lặp vô hạn */
+        }
+        @keyframes grid-travel {
+            0% { background-position: 0px 0px; }
+            100% { background-position: 24px 48px; } /* Dịch chuyển tạo cảm giác lưới đang trôi */
+        }
+
+        /* 3. Hoạt ảnh chuyển động bồng bềnh tự do cho các quầng sáng Neon (Ambient Glow Background) */
+        @keyframes blob-cyber-float {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.08); }
+            66% { transform: translate(-20px, 20px) scale(0.95); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob-cyber-float 10s ease-in-out infinite; /* Chuyển động elip co giãn trong 10 giây */
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-indigo-500 selection:text-white relative min-h-screen overflow-x-hidden">
+
+    <div class="fixed inset-0 z-0 pointer-events-none">
+        <div class="w-full h-full tech-grid-bg"></div>
+        
+        <div class="absolute top-10 left-[-10%] w-[400px] h-[400px] bg-indigo-400/10 rounded-full blur-3xl animate-blob"></div>
+        
+        <div class="absolute top-[30%] right-[-5%] w-[500px] h-[500px] bg-purple-400/10 rounded-full blur-3xl animate-blob" style="animation-delay: 4s;"></div>
+    </div>
+
+    <div class="relative z-10">
+
+        <nav class="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-slate-200/80 transition-all">
+            <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+                <span class="font-bold text-xl text-indigo-600 tracking-tight hover:scale-105 transition-transform cursor-default">Portfolio</span>
+                <div class="space-x-6 font-medium text-sm text-slate-600">
+                    <a href="#gioi-thieu" class="hover:text-indigo-600 transition-colors relative py-2 group">
+                        Giới Thiệu
+                        <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-indigo-600 group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
+                    </a>
+                    <a href="#du-an" class="hover:text-indigo-600 transition-colors relative py-2 group">
+                        Dự Án
+                        <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-indigo-600 group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
+                    </a>
+                    <a href="#tong-ket" class="hover:text-indigo-600 transition-colors relative py-2 group">
+                        Tổng Kết
+                        <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-indigo-600 group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <header id="gioi-thieu" class="max-w-5xl mx-auto px-4 py-24 border-b border-slate-200/60">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+                <div class="md:col-span-2 space-y-5">
+                    <span class="bg-indigo-50 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full border border-indigo-100 select-none">
+                        Sinh viên UET - VNU
+                    </span>
+                    <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight leading-none">
+                        Xin chào, tôi là <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Văn Phú Dũng</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Hiện là sinh viên năm nhất Khoa Công nghệ thông tin - Đại học Công nghệ-VNU. Đam mê kết hợp tư duy logic với sức mạnh của công nghệ số, trí tuệ nhân tạo.
+                    </p>
+                    <div class="pt-2">
+                        <h3 class="font-bold text-slate-900 flex items-center gap-2">🎯 Định hướng dài hạn:</h3>
+                        <p class="text-slate-600">Phát triển chuyên sâu vào lĩnh vực Điện toán đám mây (Cloud Engineering) và DevOps.</p>
+                    </div>
+                </div>
+                <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-sm border border-slate-200/60 hover:border-indigo-300 transition-all duration-300 space-y-4">
+                    <h3 class="font-bold text-slate-900 border-b border-slate-100 pb-2 flex items-center gap-2">☕ Sở thích & Cá nhân</h3>
+                    <ul class="text-sm text-slate-600 space-y-2.5">
+                        <li class="flex items-center gap-2"><span>💻</span> Lập trình</li>
+                        <li class="flex items-center gap-2"><span>📱</span> Âm nhạc</li>
+                        <li class="flex items-center gap-2"><span>🎮</span> Gaming</li>
+                        <li class="flex items-center gap-2"><span>🐱</span> Yêu động vật (Đặc biệt là Mèo)</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main id="du-an" class="max-w-5xl mx-auto px-4 py-25 border-b border-slate-200/60">
+            <div class="space-y-2 mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight flex items-center gap-3 select-none">
+                    <span class="text-amber-500 animate-pulse">📁</span> Danh Sách Bài Tập Thực Hành
+                </h2>
+                <p class="text-slate-500 text-sm md:text-base">Tập hợp sản phẩm cốt lõi minh chứng cho năng lực số đã tích lũy.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="group relative bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-indigo-400 hover:-translate-y-1.5 hover:shadow-[0_15px_30px_-10px_rgba(99,102,241,0.25)] transition-all duration-300 ease-out flex flex-col justify-between overflow-hidden">
+                    <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 group-hover:w-full transition-all duration-500 ease-out"></div>
+                    <div class="space-y-3">
+                        <span class="inline-block bg-indigo-50 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white text-xs font-bold px-2.5 py-1 rounded-md tracking-wide uppercase transition-colors duration-300">Bài 1</span>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-900 transition-colors duration-300">Thao tác cơ bản với tệp tin và thư mục</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Thiết lập cây thư mục tối ưu phân loại theo môn học và áp dụng quy tắc đặt tên tệp khoa học giúp quản lý dữ liệu hiệu quả. Rèn luyện kỹ năng tạo, đổi tên, sao chép, di chuyển, xóa tệp tin và thư mục một cách thành thạo trên hệ điều hành Windows (có thể điều chỉnh cho macOS/Linux).</p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-100 mt-6"><a href="https://drive.google.com/file/d/1K0MIo2cPp1V8zNz2jX-GKbKO1HO-41Kv/view?usp=sharing" target="_blank" class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm py-2.5 px-4 rounded-xl shadow-sm hover:shadow transition-all duration-200">Xem file minh chứng gốc &rarr;</a></div>
+                </div>
+
+                <div class="group relative bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-indigo-400 hover:-translate-y-1.5 hover:shadow-[0_15px_30px_-10px_rgba(99,102,241,0.25)] transition-all duration-300 ease-out flex flex-col justify-between overflow-hidden">
+                    <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 group-hover:w-full transition-all duration-500 ease-out"></div>
+                    <div class="space-y-3">
+                        <span class="inline-block bg-indigo-50 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white text-xs font-bold px-2.5 py-1 rounded-md tracking-wide uppercase transition-colors duration-300">Bài 2</span>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-900 transition-colors duration-300">Tìm kiếm và đánh giá thông tin học thuật</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Khai thác tài liệu chuyên sâu bằng toán tử nâng cao trên Google Scholar và lập bảng kiểm định nguồn tin học thuật uy tín phục vụ nghiên cứu. Phát triển kỹ năng tìm kiếm và đánh giá thông tin học thuật từ các nguồn đáng tin cậy.</p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-100 mt-6"><a href="https://drive.google.com/file/d/1ebGAKghYtfj8iRmSj2HjwmqHJwzzlZyJ/view?usp=sharing" target="_blank" class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm py-2.5 px-4 rounded-xl shadow-sm hover:shadow transition-all duration-200">Xem file minh chứng gốc &rarr;</a></div>
+                </div>
+
+                <div class="group relative bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-indigo-400 hover:-translate-y-1.5 hover:shadow-[0_15px_30px_-10px_rgba(99,102,241,0.25)] transition-all duration-300 ease-out flex flex-col justify-between overflow-hidden">
+                    <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 group-hover:w-full transition-all duration-500 ease-out"></div>
+                    <div class="space-y-3">
+                        <span class="inline-block bg-indigo-50 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white text-xs font-bold px-2.5 py-1 rounded-md tracking-wide uppercase transition-colors duration-300">Bài 3</span>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-900 transition-colors duration-300">Viết Prompt hiệu quả cho các tác vụ học tập</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Trình bày sự so sánh trực quan giữa cấu trúc Prompt ban đầu và Prompt cải tiến kèm kết quả đầu ra thực tế từ AI nhằm tối ưu hóa hiệu suất nghiên cứu dữ liệu. Phát triển kỹ năng viết prompt hiệu quả để tận dụng tối đa khả năng của các mô hình ngôn ngữ lớn trong học tập.</p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-100 mt-6"><a href="https://drive.google.com/file/d/1ALHftE1SWlWqQpBUkHO-jHs02ZxSCmGE/view?usp=sharing" target="_blank" class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm py-2.5 px-4 rounded-xl shadow-sm hover:shadow transition-all duration-200">Xem file minh chứng gốc &rarr;</a></div>
+                </div>
+
+                <div class="group relative bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-indigo-400 hover:-translate-y-1.5 hover:shadow-[0_15px_30px_-10px_rgba(99,102,241,0.25)] transition-all duration-300 ease-out flex flex-col justify-between overflow-hidden">
+                    <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 group-hover:w-full transition-all duration-500 ease-out"></div>
+                    <div class="space-y-3">
+                        <span class="inline-block bg-indigo-50 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white text-xs font-bold px-2.5 py-1 rounded-md tracking-wide uppercase transition-colors duration-300">Bài 4</span>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-900 transition-colors duration-300">Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Trình bày minh chứng thực tế về quá trình điều phối công việc, sử dụng không gian đám mây chia sẻ và phương thức phối hợp trực tuyến hiệu quả cùng nhóm dự án. Thành thạo các công cụ hợp tác trực tuyến và thể hiện năng lực quản lý, điều phối cá nhân trong dự án nhóm.</p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-100 mt-6"><a href="https://drive.google.com/file/d/1oZZEXI0d5ch6SNbvQJqQcgqS3bvO0Rpi/view?usp=sharing" target="_blank" class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm py-2.5 px-4 rounded-xl shadow-sm hover:shadow transition-all duration-200">Xem file minh chứng gốc &rarr;</a></div>
+                </div>
+
+                <div class="group relative bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-indigo-400 hover:-translate-y-1.5 hover:shadow-[0_15px_30px_-10px_rgba(99,102,241,0.25)] transition-all duration-300 ease-out flex flex-col justify-between overflow-hidden">
+                    <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 group-hover:w-full transition-all duration-500 ease-out"></div>
+                    <div class="space-y-3">
+                        <span class="inline-block bg-indigo-50 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white text-xs font-bold px-2.5 py-1 rounded-md tracking-wide uppercase transition-colors duration-300">Bài 5</span>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-900 transition-colors duration-300">Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Trưng bày các sản phẩm truyền thông số hoàn thiện (hình ảnh, kịch bản hoặc tài liệu đa phương tiện) được thiết kế và tối ưu hóa năng suất với sự hỗ trợ đắc lực từ AI. Thành thạo việc sử dụng các công cụ AI tạo sinh để hỗ trợ quá trình sáng tạo nội dung số.</p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-100 mt-6"><a href="https://drive.google.com/file/d/1z2ctuWSsn1lbBMdJzpIky51hyaFn3Xpt/view?usp=sharing" target="_blank" class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm py-2.5 px-4 rounded-xl shadow-sm hover:shadow transition-all duration-200">Xem file minh chứng gốc &rarr;</a></div>
+                </div>
+
+                <div class="group relative bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-indigo-400 hover:-translate-y-1.5 hover:shadow-[0_15px_30px_-10px_rgba(99,102,241,0.25)] transition-all duration-300 ease-out flex flex-col justify-between overflow-hidden">
+                    <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 group-hover:w-full transition-all duration-500 ease-out"></div>
+                    <div class="space-y-3">
+                        <span class="inline-block bg-indigo-50 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white text-xs font-bold px-2.5 py-1 rounded-md tracking-wide uppercase transition-colors duration-300">Bài 6</span>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-900 transition-colors duration-300">Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Xây dựng hệ thống các nguyên tắc ứng xử cá nhân và đạo đức công nghệ khi khai thác AI, đảm bảo tuyệt đối các quy định về an toàn thông tin và liêm chính học thuật. Phát triển kỹ năng sử dụng AI có trách nhiệm và đạo đức trong học tập và nghiên cứu.</p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-100 mt-6"><a href="https://drive.google.com/file/d/1AOSi3o8FCZIGJbCUrl4WVDd88rkhKJtV/view?usp=sharing" target="_blank" class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm py-2.5 px-4 rounded-xl shadow-sm hover:shadow transition-all duration-200">Xem file minh chứng gốc &rarr;</a></div>
+                </div>
+
+                <div class="group relative bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:border-indigo-400 hover:-translate-y-1.5 hover:shadow-[0_15px_30px_-10px_rgba(99,102,241,0.25)] transition-all duration-300 ease-out flex flex-col justify-between overflow-hidden">
+                    <div class="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 group-hover:w-full transition-all duration-500 ease-out"></div>
+                    <div class="space-y-3">
+                        <span class="inline-block bg-indigo-50 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white text-xs font-bold px-2.5 py-1 rounded-md tracking-wide uppercase transition-colors duration-300">Bài 7</span>
+                        <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-900 transition-colors duration-300">Phân tích tài liệu với trợ lý nghiên cứu AI</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Rèn luyện kỹ năng sử dụng các công cụ AI như Elicit hoặc Consensus để nhanh chóng tổng quan tài liệu khoa học phục vụ nghiên cứu và phân tích dữ liệu chuyên sâu.</p>
+                    </div>
+                    <div class="pt-6 border-t border-slate-100 mt-6"><a href="https://drive.google.com/file/d/1KZlz0-cUyvtLVMYswJJNsQDPbnvCBm2J/view?usp=sharing" target="_blank" class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm py-2.5 px-4 rounded-xl shadow-sm hover:shadow transition-all duration-200">Xem file minh chứng gốc &rarr;</a></div>
+                </div>
+            </div>
+        </main>
+
+        <footer id="tong-ket" class="max-w-5xl mx-auto px-4 py-24 text-center space-y-6">
+            <h2 class="text-3xl font-bold text-slate-900 tracking-tight flex items-center justify-center gap-2 select-none">
+                <span class="animate-bounce">🏁</span> Tổng Kết Hành Trình
+            </h2>
+            <p class="max-w-2xl mx-auto text-slate-600 leading-relaxed text-sm md:text-base">
+                Hành trình xây dựng Portfolio đã mang lại trải nghiệm vô giá. Trong thời đại công nghệ phát triển như ngày nay, việc chúng ta trang bị đầy đủ các kiến thức về công nghệ, tin học cơ bản, trí tuệ nhân tạo là một điều rất quan trọng giúp chúng ta dễ dàng học tập, nghiên cứu. Môn học Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo đã đem lại các kiến thức rất hữu ích và đầy đủ về công nghệ.
+            </p>
+            <div class="text-xs text-slate-400 pt-12 border-t border-slate-200 select-none">
+                &copy; 2026 Portfolio Công Nghệ Số. Built with HTML & Tailwind CSS.
+            </div>
+        </footer>
+
+    </div> </body>
+</html>
